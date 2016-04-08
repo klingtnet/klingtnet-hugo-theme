@@ -1,0 +1,13 @@
+body {
+    font-family: "Fira Sans", sans;
+}
+
+code {
+    font-family: "Fira Mono", "Source Code Pro", monospaced;
+}
+
+pre>code {
+    margin: 0 1em;
+    overflow-x: scroll;
+    border-radius: 5px;
+}
