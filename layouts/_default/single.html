@@ -1,0 +1,10 @@
+{{ partial "header.html" . }}
+<h1 id="title">{{ .Title }}</h1>
+<aside id="meta">
+<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Mon Jan 2, 2006" }}</time>
+<pre>{{ .FuzzyWordCount }} words</pre>
+</aside>
+<article id="content">{{ .Content }}</article>
+{{ if .Prev }}<a href="{{ .Prev.Permalink }}">prev</a>{{ end }}
+{{ if .Next }}<a href="{{ .Next.Permalink }}">next</a>{{ end }}
+{{ partial "footer.html" . }}
