@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="{{ .Description }}">
+    <meta name="author" content="{{ .Site.Author.name }}">
+    <meta name="keywords" content="{{ delimit .Keywords ", " }}">
+    <base href="{{ .Site.BaseURL }}">
+    <title>{{ .Site.Title }}</title>
+    <!-- end meta -->
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="alternate" type="application/rss+xml" href="{{ .Site.RSSLink }}" title="{{ .Site.Title }}">
+    <link rel="feed" type="application/rss+xml" href="{{ .Site.RSSLink }}" title="{{ .Site.Title }}">
+    <!-- styling -->
+    <link rel="stylesheet" href="{{ "css/normalize.min.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/animate.min.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/colors.min.css" | absURL }}">
+    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+    <link rel="stylesheet" href="{{ "css/highlight-js/hopscotch.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/katex.min.css" | absURL }}">
+    <link rel="stylesheet" href="{{ "css/main.css" | absURL }}">
+</head>
+<body>
