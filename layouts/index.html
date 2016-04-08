@@ -1,0 +1,6 @@
+{{ partial "header.html" . }}
+<article>
+{{ .Site.Data.homepage.content | markdownify }}
+</article>
+{{ range where .Data.Pages.ByPublishDate "Section" "posts" }}{{ partial "li.html" . }}{{ end }}
+{{ partial "footer.html" . }}
