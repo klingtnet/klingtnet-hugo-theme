@@ -1,0 +1,16 @@
+<nav>
+<ul>
+{{ range .Site.Menus.main.ByWeight }}
+    <li>
+        <a title="{{ .Name }}" href="{{ .URL }}">{{ if isset . "Pre" }}{{ .Pre }}{{ end }}<span>{{ .Name }}</span></a>
+    </li>
+{{ end }}
+</ul>
+<ul>
+{{ range .Site.Menus.services.ByWeight }}
+    <li>
+        <a title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
+    </li>
+{{ end }}
+</ul>
+</nav>
