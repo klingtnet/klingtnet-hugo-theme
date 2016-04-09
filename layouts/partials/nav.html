@@ -1,5 +1,11 @@
 <nav>
-<a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+<a href="{{ .Site.BaseURL }}">
+{{ if isset .Site.Params "logo" }}
+<img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
+{{ else }}
+{{ .Site.Title }}
+{{ end }}
+</a>
 <ul>
 {{ range $section := .Site.Sections.Alphabetical }}
     {{ if eq $section.Name "" }}
