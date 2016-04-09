@@ -1,8 +1,19 @@
 <nav>
 <ul>
-{{ range .Site.Menus.main.ByWeight }}
+{{ range $section := .Site.Sections.Alphabetical }}
+    {{ if eq $section.Name "" }}
+        {{ range $page := $section.Pages.ByTitle }}
+    <li><a href="{{ $page.Permalink }}">{{ $page.Title | lower }}</a></li>
+        {{ end }}
+    {{ else }}
+    <li><a href="{{ $section.Name | absURL }}">{{ $section.Name | lower }}</a></li>
+    {{ end }}
+{{ end }}
+</ul>
+<ul>
+{{ range .Site.Menus.social.ByWeight }}
     <li>
-        <a title="{{ .Name }}" href="{{ .URL }}">{{ if isset . "Pre" }}{{ .Pre }}{{ end }}<span>{{ .Name }}</span></a>
+        <a title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
     </li>
 {{ end }}
 </ul>
