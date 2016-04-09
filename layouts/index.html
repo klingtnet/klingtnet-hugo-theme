@@ -1,6 +1,7 @@
 {{ partial "header.html" . }}
-<article>
-{{ .Site.Data.homepage.content | markdownify }}
-</article>
-{{ range where .Data.Pages.ByPublishDate "Section" "posts" }}{{ partial "li.html" . }}{{ end }}
+{{ if .IsHome }}
+    {{ .Site.Data.homepage.content | markdownify }}
+{{ else }}
+    {{ range where .Data.Pages.ByPublishDate "Section" "blog" }}{{ partial "li.html" . }}{{ end }}
+{{ end }}
 {{ partial "footer.html" . }}
