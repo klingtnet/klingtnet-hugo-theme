@@ -1,3 +1,5 @@
 {{ partial "header.html" . }}
-    {{ range where .Data.Pages.ByPublishDate "Section" "blog" }}{{ partial "li.html" . }}{{ end }}
+{{ range .Data.Pages.ByPublishDate }}
+    {{ partial "li.html" . }}
+{{ end }}
 {{ partial "footer.html" . }}
