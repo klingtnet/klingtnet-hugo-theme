@@ -12,17 +12,13 @@
 {{ end }}
 </ul>
 <ul>
-{{ range .Site.Menus.social.ByWeight }}
+{{ range $menu_name, $menu := .Site.Menus }}
+    <strong>{{ $menu_name }}</strong>
+    {{ range $entry := $menu.ByWeight }}
     <li>
-        <a title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
+        <a title="{{ $entry.Name }}" href="{{ $entry.URL }}">{{ $entry.Name }}</a>
     </li>
-{{ end }}
-</ul>
-<ul>
-{{ range .Site.Menus.services.ByWeight }}
-    <li>
-        <a title="{{ .Name }}" href="{{ .URL }}">{{ .Name }}</a>
-    </li>
+    {{ end }}
 {{ end }}
 </ul>
 </nav>
