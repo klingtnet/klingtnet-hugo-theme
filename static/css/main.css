@@ -49,6 +49,11 @@ code {
     border-radius: 5px;
 }
 
+p code, p pre, li code, li pre {
+	padding: 0 0.2em;
+	color: #85144b;
+}
+
 @media (max-width: 900px) {
     .nav-container {
         padding: 1em 0;
