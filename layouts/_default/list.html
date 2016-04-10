@@ -1,5 +1,7 @@
 {{ partial "header.html" . }}
 {{ range .Data.Pages.ByPublishDate }}
-    {{ partial "li.html" . }}
+    <p>{{ partial "time.html" .Date }}{{ if ne .Date .Lastmod }}| <strong>Updated</strong> on {{ partial "time.html" .Lastmod }}{{ end }}</p>
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <p>{{ .Description }}</p>
 {{ end }}
 {{ partial "footer.html" . }}
