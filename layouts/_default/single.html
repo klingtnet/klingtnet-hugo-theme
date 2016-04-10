@@ -1,9 +1,11 @@
 {{ partial "header.html" . }}
-<h1 id="title">{{ .Title }}</h1>
-<aside id="meta">
-<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Mon Jan 2, 2006" }}</time>
-</aside>
-<article id="content">{{ .Content }}</article>
+<section>
+<header id="meta">
+    <h1 id="title">{{ .Title }}</h1>
+    <p>Posted on {{ partial "time.html" .Date }}</p>
+</header>
+    <article id="content">{{ .Content }}</article>
+</section>
 {{ if .Prev }}<a href="{{ .Prev.Permalink }}">prev</a>{{ end }}
 {{ if .Next }}<a href="{{ .Next.Permalink }}">next</a>{{ end }}
 {{ partial "footer.html" . }}
