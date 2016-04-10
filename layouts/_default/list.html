@@ -1,9 +1,13 @@
 {{ partial "header.html" . }}
     <section id="post-list">
 {{ range .Data.Pages.ByPublishDate }}
-    <p>{{ partial "time.html" .Date }}{{ if ne .Date .Lastmod }}| <strong>Updated</strong> on {{ partial "time.html" .Lastmod }}{{ end }}</p>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
-    <p>{{ .Description }}</p>
+    <div class="post-item">
+        <a class="list-item-title" href="{{ .Permalink }}">{{ .Title }}</a>
+        <div class="list-item-meta">
+            <div class="gray">{{ partial "time.html" .Date }}{{ if ne .Date .Lastmod }}| <strong>Updated</strong> on {{ partial "time.html" .Lastmod }}{{ end }}</div>
+            <p>{{ .Description }}</p>
+        </div>
+    </div>
 {{ end }}
     </section>
 {{ partial "footer.html" . }}
