@@ -1,30 +1,31 @@
 <nav>
-<a href="{{ .Site.BaseURL }}">
-{{ if isset .Site.Params "logo" }}
-<img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
-{{ else }}
-{{ .Site.Title }}
-{{ end }}
-</a>
-<ul>
-{{ range $section := .Site.Sections.Alphabetical }}
-    {{ if eq $section.Name "" }}
-        {{ range $page := $section.Pages.ByTitle }}
-    <li><a href="{{ $page.Permalink }}">{{ $page.Title | lower }}</a></li>
-        {{ end }}
+<div class="nav-container">
+    <a href="{{ .Site.BaseURL }}">
+    {{ if isset .Site.Params "logo" }}
+    <img class="nav-logo animated flipInX" src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
     {{ else }}
-    <li><a href="{{ $section.Name | absURL }}">{{ $section.Name | lower }}</a></li>
+    {{ .Site.Title }}
     {{ end }}
-{{ end }}
-</ul>
-<ul>
-{{ range $menu_name, $menu := .Site.Menus }}
-    <strong>{{ $menu_name }}</strong>
-    {{ range $entry := $menu.ByWeight }}
-    <li>
-        <a title="{{ $entry.Name }}" href="{{ $entry.URL }}">{{ $entry.Name }}</a>
-    </li>
+    </a>
+    <ul>
+    {{ range $section := .Site.Sections.Alphabetical }}
+        {{ if eq $section.Name "" }}
+            {{ range $page := $section.Pages.ByTitle }}
+        <li><a href="{{ $page.Permalink }}">{{ $page.Title | lower }}</a></li>
+            {{ end }}
+        {{ else }}
+        <li><a href="{{ $section.Name | absURL }}">{{ $section.Name | lower }}</a></li>
+        {{ end }}
     {{ end }}
-{{ end }}
-</ul>
+    </ul>
+    {{ range $menu_name, $menu := .Site.Menus }}
+    <ul id="nav-{{$menu_name}}" class="nav-other">
+        {{ range $entry := $menu.ByWeight }}
+        <li>
+            <a title="{{ $entry.Name }}" href="{{ $entry.URL }}">{{ $entry.Name }}</a>
+        </li>
+        {{ end }}
+    </ul>
+    {{ end }}
+</div>
 </nav>
