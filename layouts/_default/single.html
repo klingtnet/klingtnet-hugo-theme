@@ -3,6 +3,7 @@
 <header id="meta">
     <h1 id="title">{{ .Title }}</h1>
     <p>Posted on {{ partial "time.html" .Date }}</p>
+    {{ if ne .Date .Lastmod }}<p><strong>Updated</strong> on {{ partial "time.html" .Lastmod }}</p>{{ end }}
 </header>
     <article id="content">{{ .Content }}</article>
 </section>
