@@ -7,6 +7,4 @@
 </header>
     <article id="content">{{ .Content }}</article>
 </section>
-{{ if .Prev }}<a href="{{ .Prev.Permalink }}">prev</a>{{ end }}
-{{ if .Next }}<a href="{{ .Next.Permalink }}">next</a>{{ end }}
 {{ partial "footer.html" . }}
