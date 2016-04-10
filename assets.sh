@@ -7,6 +7,7 @@ ANIMATE_VERSION="3.5.1"
 COLORS_VERSION="2.2.0"
 ZEPTO_VERSION="1.1.6"
 KATEX_VERSION="0.5.1"
+HLJS_VERSION="9.3.0"
 CSS_PATH=static/css
 JS_PATH=static/js
 
@@ -50,10 +51,20 @@ setup_katex() {
     popd
 }
 
+setup_hljs() {
+    local url="cdnjs.cloudflare.com/ajax/libs/highlight.js/${HLJS_VERSION}"
+    pushd $JS_PATH &&\
+        curl -Lsf --remote-name ${url}/highlight.min.js
+        curl -Lsf --remote-name ${url}/languages/rust.min.js
+        curl -Lsf --remote-name ${url}/languages/go.min.js
+    popd
+}
+
 setup_normalize &&\
     setup_animate &&\
     setup_colors &&\
     setup_zepto &&\
     setup_katex
+    setup_hljs
 # highlight.js is a custom build to get Rust support
 
