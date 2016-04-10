@@ -8,7 +8,7 @@
     {{ end }}
     </a>
     <ul>
-    {{ range $section := .Site.Sections.Alphabetical }}
+    {{ range $section := .Site.Sections.Alphabetical.Reverse}}
         {{ if eq $section.Name "" }}
             {{ range $page := $section.Pages.ByTitle }}
         <li><a href="{{ $page.Permalink }}">{{ $page.Title | lower }}</a></li>
