@@ -54,6 +54,10 @@ p code, p pre, li code, li pre {
 	color: #85144b;
 }
 
+em {
+	font-weight: 300;
+}
+
 @media (max-width: 900px) {
     .nav-container {
         padding: 1em 0;
