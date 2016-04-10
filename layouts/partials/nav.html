@@ -17,6 +17,7 @@
         <li><a class="nav-anim" href="{{ $section.Name | absURL }}">{{ $section.Name | lower }}</a></li>
         {{ end }}
     {{ end }}
+	<li><a class="nav-anim" href="{{ .Site.RSSLink | absURL }}">RSS</a></li>
     </ul>
     {{ range $menu_name, $menu := .Site.Menus }}
     <ul id="nav-{{$menu_name}}" class="nav-other">
