@@ -11,19 +11,19 @@
     {{ range $section := .Site.Sections.Alphabetical.Reverse}}
         {{ if eq $section.Name "" }}
             {{ range $page := $section.Pages.ByTitle }}
-        <li><a class="nav-anim" href="{{ $page.Permalink }}">{{ $page.Title | lower }}</a></li>
+        <li><a class="nav-anim upper" href="{{ $page.Permalink }}">{{ $page.Title | lower }}</a></li>
             {{ end }}
         {{ else }}
-        <li><a class="nav-anim" href="{{ $section.Name | absURL }}">{{ $section.Name | lower }}</a></li>
+        <li><a class="nav-anim upper" href="{{ $section.Name | absURL }}">{{ $section.Name | lower }}</a></li>
         {{ end }}
     {{ end }}
-	<li><a class="nav-anim" href="{{ .Site.RSSLink | absURL }}">RSS</a></li>
+	<li><a class="nav-anim upper" href="{{ .Site.RSSLink | absURL }}">RSS</a></li>
     </ul>
     {{ range $menu_name, $menu := .Site.Menus }}
     <ul id="nav-{{$menu_name}}" class="nav-other">
         {{ range $entry := $menu.ByWeight }}
         <li>
-            <a class="nav-anim" title="{{ $entry.Name }}" href="{{ $entry.URL }}">{{ $entry.Name }}</a>
+            <a class="nav-anim upper" title="{{ $entry.Name }}" href="{{ $entry.URL }}">{{ $entry.Name }}</a>
         </li>
         {{ end }}
     </ul>
