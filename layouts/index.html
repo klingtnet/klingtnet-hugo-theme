@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
-{{ if .IsHome }}
-    {{ .Site.Data.homepage.content | markdownify }}
+{{ if and (.IsHome) (isset .Site.Params "homepage" ) }}
+    {{ readFile .Site.Params.homepage | markdownify }}
 {{ else }}
     {{ range where .Data.Pages.ByPublishDate "Section" "blog" }}{{ partial "li.html" . }}{{ end }}
 {{ end }}
