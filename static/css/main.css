@@ -3,6 +3,10 @@ body {
 	background-color: #EFEFEF;
 }
 
+.upper {
+	text-transform: uppercase;
+}
+
 .content-container {
     padding: 0 1em;
     margin: 0;
