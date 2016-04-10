@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+<section>
+<header id="meta">
+    <h1 id="title">{{ .Title }}</h1>
+	<div class="post-meta"><p>Posted on {{ partial "time.html" .Date }}</p>
+    {{ if ne .Date .Lastmod }}<p><strong>Updated</strong> on {{ partial "time.html" .Lastmod }}</p>{{ end }}</div>
+</header>
+    <article id="content">{{ .Content }}</article>
+</section>
+<div class="email-comment"><p>Comments, improvements or something else to say? Leave me a <a href="mailto:comments@klingt.net?subject=Comment:{{.Title}}">mail</a>.</p></div>
+<nav>
+<div class="blog-post-nav">
+{{ if .Prev }}<a href="{{ .Prev.Permalink }}" title="newer post">⇠ newer</a>{{ end }}
+{{ if .Next }}<a href="{{ .Next.Permalink }}" title="older post">older ⇢</a>{{ end }}
+</div>
+</nav>
+{{ partial "footer.html" . }}
