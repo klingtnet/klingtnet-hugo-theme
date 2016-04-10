@@ -64,7 +64,6 @@ setup_normalize &&\
     setup_animate &&\
     setup_colors &&\
     setup_zepto &&\
-    setup_katex
     setup_hljs
 # highlight.js is a custom build to get Rust support
 
