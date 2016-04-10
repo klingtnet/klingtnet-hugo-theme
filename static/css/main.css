@@ -25,6 +25,17 @@ pre>code {
     .nav-other {
         border-top: 2px solid lightgray;
     }
+    .nav-container ul {
+        margin: 0;
+        padding: .5em 0;
+        list-style: none;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .nav-container ul li {
+        text-align: center;
+        margin: 0.2em 0;
+    }
 }
 @media (min-width: 900px) {
     .nav-container {
@@ -39,24 +50,6 @@ pre>code {
     .nav-other {
         border-left: 2px solid lightgray;
     }
-}
-
-.nav-logo {
-    width: 2em;
-    height: auto;
-    line-height: 1;
-}
-
-@media (max-width: 900px) {
-    .nav-container ul {
-        margin: 0;
-        padding: .5em 0;
-        list-style: none;
-        display: flex;
-        flex-flow: column wrap;
-    }
-}
-@media (min-width: 900px) {
     .nav-container ul {
         margin: 0;
         padding: 0;
@@ -64,15 +57,6 @@ pre>code {
         display: flex;
         flex-flow: row wrap;
     }
-}
-
-@media (max-width: 900px) {
-    .nav-container ul li {
-        text-align: center;
-        margin: 0.2em 0;
-    }
-}
-@media (min-width: 900px) {
     .nav-container ul li {
         margin: 0 1em 0 0;
         text-align: center;
