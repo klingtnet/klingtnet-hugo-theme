@@ -77,10 +77,10 @@ em {
         align-items: center;
         line-height: 1;
     }
-    .nav-other {
+    .footer-nav > .nav-container-item {
         border-top: 2px solid lightgray;
     }
-    .nav-container > .nav-other:first-child {
+    .footer-nav > .nav-container-item:first-child {
         border-top: none;
     }
     .nav-container ul {
@@ -104,12 +104,6 @@ em {
         justify-content: center;
         align-items: center;
         line-height: 1;
-    }
-    .nav-other {
-        border-left: 2px solid lightgray;
-    }
-    .nav-container > .nav-other:first-child {
-        border-left: none;
     }
     .nav-container > ul {
         margin: 0;
