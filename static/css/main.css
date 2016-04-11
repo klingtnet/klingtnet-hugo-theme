@@ -110,13 +110,19 @@ em {
         list-style: none;
         display: flex;
         flex-flow: row wrap;
+        align-items: baseline;
     }
-        margin: 0 1em 0 0;
+    .nav-container-item > ul > li {
+        margin: 0 .5em;
+        text-align: center;
+    }
     .nav-container-item > ul > li:first-child {
+        margin: 0 .5em 0 0;
         text-align: center;
     }
     .nav-container-item > ul > li:last-child {
-        margin: 0 1em;
+        margin: 0 0 0 .5em;
+        text-align: center;
     }
 
 	.content-container {
@@ -128,6 +134,10 @@ em {
 
 .footer-nav {
     padding: 1em 0;
+}
+
+.nav-menu-title {
+    margin: 0;
 }
 
 .nav-logo {
