@@ -2,13 +2,13 @@
 <div class="nav-container">
     <a href="{{ .Site.BaseURL }}">
     {{ if isset .Site.Params "logo" }}
-    <img class="nav-logo animated flipInX" src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
+        <img class="nav-logo animated flipInX" src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
     {{ else }}
-    {{ .Site.Title }}
+        {{ .Site.Title }}
     {{ end }}
     </a>
     <ul>
-    {{ range $section := .Site.Sections.Alphabetical.Reverse}}
+    {{ range $section := .Site.Sections.Alphabetical.Reverse }}
         {{ if eq $section.Name "" }}
             {{ range $page := $section.Pages.ByTitle }}
         <li><a class="nav-anim upper" href="{{ $page.Permalink }}">{{ $page.Title | lower }}</a></li>
@@ -17,7 +17,7 @@
         <li><a class="nav-anim upper" href="{{ $section.Name | absURL }}">{{ $section.Name | lower }}</a></li>
         {{ end }}
     {{ end }}
-	<li><a class="nav-anim upper" href="{{ .Site.RSSLink | absURL }}">RSS</a></li>
+	    <li><a class="nav-anim upper" href="{{ .Site.RSSLink | absURL }}">RSS</a></li>
     </ul>
 </div>
 </nav>
