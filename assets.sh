@@ -4,7 +4,6 @@ set -euo pipefail
 
 NORMALIZE_VERSION="4.0.0"
 ANIMATE_VERSION="3.5.1"
-COLORS_VERSION="2.2.0"
 ZEPTO_VERSION="1.1.6"
 KATEX_VERSION="0.5.1"
 HLJS_VERSION="9.3.0"
@@ -21,13 +20,6 @@ setup_normalize() {
 
 setup_animate() {
     local url="https://raw.githubusercontent.com/daneden/animate.css/${ANIMATE_VERSION}/animate.min.css"
-    pushd $CSS_PATH &&\
-        curl -Lsf --remote-name ${url} &&\
-    popd
-}
-
-setup_colors() {
-    local url="https://s3-us-west-2.amazonaws.com/colors-css/${COLORS_VERSION}/colors.min.css"
     pushd $CSS_PATH &&\
         curl -Lsf --remote-name ${url} &&\
     popd
@@ -62,7 +54,6 @@ setup_hljs() {
 
 setup_normalize &&\
     setup_animate &&\
-    setup_colors &&\
     setup_zepto &&\
     setup_hljs
 # highlight.js is a custom build to get Rust support
