@@ -83,14 +83,14 @@ em {
     .footer-nav > .nav-container-item:first-child {
         border-top: none;
     }
-    .nav-container ul {
+    .nav-container-item > ul {
         margin: 0;
         padding: .5em 0;
         list-style: none;
         display: flex;
         flex-flow: column wrap;
     }
-    .nav-container ul li {
+    .nav-container-item > ul > li {
         text-align: center;
         margin: 0.2em 0;
     }
@@ -105,18 +105,19 @@ em {
         align-items: center;
         line-height: 1;
     }
-    .nav-container > ul {
+
+    .nav-container-item > ul {
         margin: 0;
         padding: 0;
         list-style: none;
         display: flex;
         flex-flow: row wrap;
     }
-    .nav-container > ul li {
         margin: 0 1em 0 0;
+    .nav-container-item > ul > li:first-child {
         text-align: center;
     }
-    .nav-container > ul li:first-child {
+    .nav-container-item > ul > li:last-child {
         margin: 0 1em;
     }
 
