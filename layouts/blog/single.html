@@ -11,6 +11,7 @@
 <nav>
 <div class="blog-post-nav">
 {{ if .Prev }}<a href="{{ .Prev.Permalink }}" title="newer post">⇠ newer</a>{{ end }}
+<a href="{{ .Permalink }}#">↑</a>
 {{ if .Next }}<a href="{{ .Next.Permalink }}" title="older post">older ⇢</a>{{ end }}
 </div>
 </nav>
