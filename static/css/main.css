@@ -63,6 +63,10 @@ em {
     padding: .61em 0;
 }
 
+.nav-container-item > ul > li {
+    width: 5em;
+}
+
 @media (max-width: 900px) {
     .nav-container {
         padding: 1em 0;
