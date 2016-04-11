@@ -1,11 +1,11 @@
 {{ partial "header.html" . }}
 <section id="blog-post">
     <header id="meta">
-        <h1 id="title">{{ .Title }}</h1>
+        <h1 id="post-title">{{ .Title }}</h1>
         <div class="post-meta"><p>Posted on {{ partial "time.html" .Date }}</p>
         {{ if ne .Date .Lastmod }}<p><strong>Updated</strong> on {{ partial "time.html" .Lastmod }}</p>{{ end }}</div>
     </header>
-    <article id="content">{{ .Content }}</article>
+    <article id="post-content">{{ .Content }}</article>
 </section>
 <div class="email-comment"><p>Comments, improvements or something else to say? Send me an <a href="mailto:comments@klingt.net?subject=Comment: {{.Title}}">email</a>.</p></div>
 <nav>
