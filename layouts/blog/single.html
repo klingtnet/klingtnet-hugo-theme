@@ -7,7 +7,7 @@
 </header>
     <article id="content">{{ .Content }}</article>
 </section>
-<div class="email-comment"><p>Comments, improvements or something else to say? Leave me a <a href="mailto:comments@klingt.net?subject=Comment:{{.Title}}">mail</a>.</p></div>
+<div class="email-comment"><p>Comments, improvements or something else to say? Send me an <a href="mailto:comments@klingt.net?subject=Comment: {{.Title}}">email</a>.</p></div>
 <nav>
 <div class="blog-post-nav">
 {{ if .Prev }}<a href="{{ .Prev.Permalink }}" title="newer post">← newer</a>{{ end }}
