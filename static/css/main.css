@@ -71,7 +71,7 @@ em {
     .nav-other {
         border-top: 2px solid lightgray;
     }
-    .nav-container .nav-other:first-child {
+    .nav-container > .nav-other:first-child {
         border-top: none;
     }
     .nav-container ul {
@@ -102,18 +102,19 @@ em {
     .nav-container > .nav-other:first-child {
         border-left: none;
     }
-    .nav-container ul {
+    .nav-container > ul {
         margin: 0;
         padding: 0;
         list-style: none;
         display: flex;
         flex-flow: row wrap;
+        width: 63%;
     }
-    .nav-container ul li {
+    .nav-container > ul li {
         margin: 0 1em 0 0;
         text-align: center;
     }
-    .nav-container ul li:first-child {
+    .nav-container > ul li:first-child {
         margin: 0 1em;
     }
 
