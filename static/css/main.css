@@ -71,6 +71,9 @@ em {
     .nav-other {
         border-top: 2px solid lightgray;
     }
+    .nav-container .nav-other:first-child {
+        border-top: none;
+    }
     .nav-container ul {
         margin: 0;
         padding: .5em 0;
@@ -96,6 +99,9 @@ em {
     .nav-other {
         border-left: 2px solid lightgray;
     }
+    .nav-container > .nav-other:first-child {
+        border-left: none;
+    }
     .nav-container ul {
         margin: 0;
         padding: 0;
@@ -116,6 +122,10 @@ em {
 		width: 80vw;
 		max-width: 850px;
 	}
+}
+
+.footer-nav {
+    padding: 1em 0;
 }
 
 .nav-logo {

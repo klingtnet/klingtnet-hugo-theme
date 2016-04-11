@@ -19,14 +19,5 @@
     {{ end }}
 	<li><a class="nav-anim upper" href="{{ .Site.RSSLink | absURL }}">RSS</a></li>
     </ul>
-    {{ range $menu_name, $menu := .Site.Menus }}
-    <ul id="nav-{{$menu_name}}" class="nav-other">
-        {{ range $entry := $menu.ByWeight }}
-        <li>
-            <a class="nav-anim upper" title="{{ $entry.Name }}" href="{{ $entry.URL }}">{{ $entry.Name }}</a>
-        </li>
-        {{ end }}
-    </ul>
-    {{ end }}
 </div>
 </nav>
