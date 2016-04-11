@@ -128,13 +128,14 @@ a.nav-anim {
 	text-decoration: none;
 	display: inline-block;
 	vertical-align: middle;
-	transition: transform 300ms ease-in 0s, color 300ms ease-in 0s;
+    background-color: none;
+    padding: .16em .3em;
+	transition: color 300ms ease-in 0s, background-color 300ms ease-in 0s;
 }
 
 a.nav-anim:hover {
-	color: #111;
-	-webkit-transform: rotateY(360deg);
-	transform: rotateY(360deg);
+    background-color: #0074D9;
+	color: #EFEFEF;
 }
 
 a.list-item-title {
