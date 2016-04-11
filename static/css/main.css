@@ -3,6 +3,19 @@ body {
     background-color: #EFEFEF;
 	color: #111;
 }
+@media (max-width: 1920px) {
+    .content-container {
+        max-width: 850px;
+    }
+}
+@media (min-width: 2560px) {
+    body {
+        font-size: 200%;
+    }
+    .content-container {
+        max-width: 50%;
+    }
+}
 .upper { text-transform: uppercase }
 .content-container {
     padding: 0 1em;
@@ -108,7 +121,6 @@ em { font-weight: 300 }
     .content-container {
         margin: auto;
         width: 80vw;
-        max-width: 850px;
     }
 }
 .footer-nav { padding: 1em 0 }
