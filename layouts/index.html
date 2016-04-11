@@ -2,6 +2,12 @@
 {{ if and (.IsHome) (isset .Site.Params "homepage" ) }}
     {{ readFile .Site.Params.homepage | markdownify }}
 {{ else }}
-    {{ range where .Data.Pages.ByPublishDate "Section" "blog" }}{{ partial "li.html" . }}{{ end }}
+    {{ range where .Data.Pages.ByPublishDate "Section" "blog" }}
+    <li>
+        <p>{{ .Date.Format "2006-01-02" }}</p>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <p>{{ .Description }}</p>
+    </li>
+    {{ end }}
 {{ end }}
 {{ partial "footer.html" . }}
