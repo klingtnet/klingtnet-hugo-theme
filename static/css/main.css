@@ -73,6 +73,9 @@ em { font-weight: 300 }
         text-align: center;
         margin: 0.2em 0;
     }
+	.nav-menu-title {
+		padding: .61em 0;
+	}
 }
 @media (min-width: 900px) {
     .nav-container {
