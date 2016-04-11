@@ -1,6 +1,7 @@
 body {
     font-family: "Fira Sans", sans;
     background-color: #EFEFEF;
+	color: #111;
 }
 .upper { text-transform: uppercase }
 .content-container {
