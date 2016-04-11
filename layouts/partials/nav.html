@@ -14,7 +14,9 @@
         {{ range $section := .Site.Sections.Alphabetical.Reverse }}
             {{ if eq $section.Name "" }}
                 {{ range $page := $section.Pages.ByTitle }}
+                    {{ if not $page.Params.hide }}
             <li><a class="nav-anim upper" href="{{ $page.Permalink }}">{{ $page.Title | lower }}</a></li>
+                    {{ end }}
                 {{ end }}
             {{ else }}
             <li><a class="nav-anim upper" href="{{ $section.Name | absURL }}">{{ $section.Name | lower }}</a></li>
