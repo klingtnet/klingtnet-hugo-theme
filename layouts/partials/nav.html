@@ -1,23 +1,27 @@
 <nav>
 <div class="nav-container">
-    <a href="{{ .Site.BaseURL }}">
-    {{ if isset .Site.Params "logo" }}
-        <img class="nav-logo animated flipInX" src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
-    {{ else }}
-        {{ .Site.Title }}
-    {{ end }}
-    </a>
-    <ul>
-    {{ range $section := .Site.Sections.Alphabetical.Reverse }}
-        {{ if eq $section.Name "" }}
-            {{ range $page := $section.Pages.ByTitle }}
-        <li><a class="nav-anim upper" href="{{ $page.Permalink }}">{{ $page.Title | lower }}</a></li>
-            {{ end }}
+    <div class="nav-container-item">
+        <a href="{{ .Site.BaseURL }}">
+        {{ if isset .Site.Params "logo" }}
+            <img class="nav-logo animated flipInX" src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
         {{ else }}
-        <li><a class="nav-anim upper" href="{{ $section.Name | absURL }}">{{ $section.Name | lower }}</a></li>
+            {{ .Site.Title }}
         {{ end }}
-    {{ end }}
-	    <li><a class="nav-anim upper" href="{{ .Site.RSSLink | absURL }}">RSS</a></li>
-    </ul>
+        </a>
+    </div>
+    <div class="nav-container-item">
+        <ul>
+        {{ range $section := .Site.Sections.Alphabetical.Reverse }}
+            {{ if eq $section.Name "" }}
+                {{ range $page := $section.Pages.ByTitle }}
+            <li><a class="nav-anim upper" href="{{ $page.Permalink }}">{{ $page.Title | lower }}</a></li>
+                {{ end }}
+            {{ else }}
+            <li><a class="nav-anim upper" href="{{ $section.Name | absURL }}">{{ $section.Name | lower }}</a></li>
+            {{ end }}
+        {{ end }}
+            <li><a class="nav-anim upper" href="{{ .Site.RSSLink | absURL }}">RSS</a></li>
+        </ul>
+    </div>
 </div>
 </nav>

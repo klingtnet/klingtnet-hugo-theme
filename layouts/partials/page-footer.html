@@ -1,14 +1,19 @@
 <footer>
     <div class="page-footer">
         <div class="nav-container footer-nav">
-        {{ range $menu_name, $menu := .Site.Menus }}
-        <ul id="nav-{{$menu_name}}" class="nav-other">
-            {{ range $entry := $menu.ByWeight }}
-            <li>
-                <a class="nav-anim upper" title="{{ $entry.Name }}" href="{{ $entry.URL }}">{{ $entry.Name }}</a>
-            </li>
-            {{ end }}
-        </ul>
+        {{ range $menu_title, $menu := .Site.Menus }}
+            <div class="nav-container-item">
+                <ul id="nav-{{$menu_title}}" class="nav-other">
+                    <li>
+                        <h3 class="nav-menu-title">{{ $menu_title }}</h3>
+                    </li>
+                    {{ range $entry := $menu.ByWeight }}
+                    <li>
+                        <a class="nav-anim upper" title="{{ $entry.Name }}" href="{{ $entry.URL }}">{{ $entry.Name }}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
         {{ end }}
         </div>
         <p>{{ .Site.Title }} &mdash; {{ .Site.Author.name }} &mdash; <time datetime="{{ .Site.LastChange.Format "2006-01-02" }}">{{ .Site.LastChange.Format "2006" }}</time></p>

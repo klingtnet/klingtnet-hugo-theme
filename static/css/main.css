@@ -58,6 +58,11 @@ em {
 	font-weight: 300;
 }
 
+.nav-container-item {
+    display: flex;
+    padding: .61em 0;
+}
+
 @media (max-width: 900px) {
     .nav-container {
         padding: 1em 0;
