@@ -2,8 +2,10 @@
 <section id="blog-post">
     <header id="meta">
         <h1 id="post-title">{{ .Title }}</h1>
+{{ if not (isset .Params "hidemeta") }}
         <div class="post-meta"><p>Posted on {{ partial "time.html" .Date }}</p>
         {{ if ne .Date .Lastmod }}<p><strong>Updated</strong> on {{ partial "time.html" .Lastmod }}</p>{{ end }}</div>
+{{ end }}
     </header>
     <article id="post-content">{{ .Content }}</article>
 </section>
