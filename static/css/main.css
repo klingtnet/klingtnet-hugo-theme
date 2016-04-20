@@ -185,3 +185,8 @@ dl.resume > dd {
     flex-basis: 64%;
     padding-left: 3%;
 }
+img.application-photo {
+    margin: 1em 0px;
+    border-radius: 1em;
+    box-shadow: 0px 0px 5px rgba(170, 170, 170, 0.5);
+}
