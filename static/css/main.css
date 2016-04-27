@@ -91,6 +91,9 @@ em { font-weight: 300 }
 	}
 }
 @media (min-width: 900px) {
+    body {
+        font-size: 1.2em;
+    }
     .nav-container {
         padding: 2em 0 3.24em 0;
         justify-content: center;
