@@ -56,6 +56,15 @@ li pre {
     padding: 0 0.2em;
     color: #85144b;
 }
+code.imprint-address {
+    text-align: left;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+code.imprint-email {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
 em { font-weight: 300 }
 .nav-container-item {
     display: flex;
