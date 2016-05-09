@@ -168,6 +168,14 @@ div.post-item:last-child {
     border-bottom: none;
     margin-bottom: 0;
 }
+div.error-page {
+    text-align: center;
+}
+h1.error-404 {
+    color: #85144b;
+    font-size: 5em !important;
+}
+
 .post-meta {
     padding-left: 1em;
     padding-bottom: .63em;
