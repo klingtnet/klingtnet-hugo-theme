@@ -168,6 +168,11 @@ div.post-item:last-child {
     border-bottom: none;
     margin-bottom: 0;
 }
+#title {
+    font-style: italic;
+    font-size: 2.5em;
+    text-align: center;
+}
 div.error-page {
     text-align: center;
 }
