@@ -12,9 +12,9 @@
 <div class="email-comment"><p>Comments, improvements or something else to say? Send me an <a href="mailto:comments@klingt.net?subject=Comment: {{.Title}}">email</a>.</p></div>
 <nav>
 <div class="blog-post-nav">
-    <div>{{ if .Prev }}{{ if eq .Prev.Section "blog" }}<a href="{{ .Prev.Permalink }}" title="newer post">← newer</a>{{ end }}{{ end }}</div>
+    <div>{{ if .NextInSection }}<a href="{{ .NextInSection.Permalink }}" title="older post">← newer</a>{{ end }}</div>
     <div><a href="{{ .Permalink }}#" title="back to top">↑</a></div>
-    <div>{{ if .Next }}{{ if eq .Next.Section "blog" }}<a href="{{ .Next.Permalink }}" title="older post">older →</a>{{ end }}{{ end }}</div>
+    <div>{{ if .PrevInSection }}<a href="{{ .PrevInSection.Permalink }}" title="newer post">older →</a>{{ end }}</div>
 </div>
 </nav>
 {{ partial "footer.html" . }}
