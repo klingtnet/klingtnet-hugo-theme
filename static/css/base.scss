@@ -1,0 +1,45 @@
+body {
+    font-family: $sans-fonts;
+    background-color: $light;
+	color: $dark;
+
+    @media (min-width: $desktop) {
+        body {
+            font-size: 1.25em;
+        }
+    }
+
+    @media (min-width: $xlarge) {
+        body {
+            font-size: 2em;
+        }
+    }
+}
+
+a { 
+    color: $highlight;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+pre,
+code {
+    font-family: $mono-fonts;
+    overflow-x: auto;
+    border-radius: 5px;
+    color: $code-color;
+
+    &.imprint-address {
+        text-align: left;
+        unicode-bidi: bidi-override;
+        direction: rtl;
+    }
+}
+
+em {
+    font-weight: 300;
+}

@@ -1,0 +1,69 @@
+$dark: #111;
+$light: #EFEFEF;
+$gray: #555;
+$code-color: #85144B;
+$highlight: #0074D9;
+$sans-fonts: "Fira Sans", sans-serif;
+$mono-fonts: "Fira Mono", "Source Code Pro", monospace;
+$fast: 300ms;
+$small: .25em;
+$piem: 3.14em;
+$medium: 2.5 * $small;
+$desktop: 900px;
+$fhd: 1920px;
+$xlarge: 2560px;
+
+// helper
+.upper { text-transform: uppercase; }
+.gray { color: $gray; }
+.timestamp {
+    font-size: .9rem;
+    color: $gray;
+}
+
+@import 'base';
+@import 'nav';
+@import 'content';
+@import 'resume';
+
+.page-footer {
+    padding: $piem 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+#post-list {
+    .list-item-title { font-weight: bold }
+
+    .list-item-meta { padding-left: 1em }
+    .post-item {
+        &:nth-child(n) {
+            border-bottom: 1px dotted $gray;
+            margin-bottom: 1em;
+        }
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.error-page {
+    text-align: center;
+
+    .error-404-img {
+        border-radius: 1em;
+    }
+}
+
+.laptop-sketch {
+    max-width: 67%;
+    margin: $piem auto;
+    display: flex;
+}
+
+
