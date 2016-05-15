@@ -72,7 +72,8 @@
         text-decoration: none;
         background-color: none;
         border-radius: 5px;
-        padding: .16em .3em;
+        padding: $medium $small;
+        display: block;
         transition: color 300ms ease-in 0s, background-color 300ms ease-in 0s;
 
         &:hover {
