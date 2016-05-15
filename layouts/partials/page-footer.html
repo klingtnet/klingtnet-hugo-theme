@@ -9,7 +9,7 @@
                     </li>
                     {{ range $entry := $menu.ByWeight }}
                     <li>
-                        <a class="nav-anim upper" title="{{ $entry.Name }}" href="{{ $entry.URL }}">{{ $entry.Name }}</a>
+                        <a class="nav-button upper" title="{{ $entry.Name }}" href="{{ $entry.URL }}">{{ $entry.Name }}</a>
                     </li>
                     {{ end }}
                 </ul>
