@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 <section>
 <header id="meta">
-    <h1 id="title">{{ .Title }}</h1>
+{{ if not (isset .Params "hidetitle") }}<h1 id="title">{{ .Title }}</h1>{{ end }}
 {{ if not (isset .Params "hidemeta") }}
 	<div class="post-meta"><p>Posted on {{ partial "time.html" .Date }}</p>
     {{ if ne .Date .Lastmod }}<p><strong>Updated</strong> on {{ partial "time.html" .Lastmod }}</p>{{ end }}</div>
