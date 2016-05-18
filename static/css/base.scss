@@ -4,15 +4,11 @@ body {
 	color: $dark;
 
     @media (min-width: $desktop) {
-        body {
-            font-size: 1.25em;
-        }
+        font-size: 1.25em;
     }
 
     @media (min-width: $xlarge) {
-        body {
-            font-size: 2em;
-        }
+        font-size: 2em;
     }
 }
 
