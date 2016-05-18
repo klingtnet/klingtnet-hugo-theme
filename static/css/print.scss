@@ -1,0 +1,45 @@
+@media print {
+    body {
+        font-size: 80%;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+    }
+
+    hr {
+        display: none;
+    }
+
+    h2 {
+        margin-top: 0.5*$piem;
+        margin-left: -$medium;
+        margin-bottom: 0.5 * $eem;
+        width: 100%;
+        font-style: italic;
+        border-bottom: 2px solid black;
+    }
+
+    .content-container {
+        max-width: 73vw;
+    }
+
+    .application-photo {
+        width: 50vw;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .blog-post-nav {
+        display: none;
+    }
+
+    .email-comment {
+        display: none;
+    }
+
+    .page-footer {
+        display: none;
+    }
+}
