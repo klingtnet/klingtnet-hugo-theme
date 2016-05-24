@@ -73,7 +73,7 @@
         background-color: none;
         border-radius: 5px;
         padding: $medium $small;
-        display: block;
+        display: inline-block;
         transition: color 300ms ease-in 0s, background-color 300ms ease-in 0s;
 
         &:hover {
