@@ -28,12 +28,18 @@ code {
     overflow-x: auto;
     border-radius: 5px;
     color: $code-color;
+}
 
-    &.imprint-address {
-        text-align: left;
-        unicode-bidi: bidi-override;
-        direction: rtl;
-    }
+.address-rtl {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: left;
+}
+
+.imprint-address {
+    font-family: $mono-fonts;
+    margin-left: 1em;
+    font-style: normal;
 }
 
 em {
